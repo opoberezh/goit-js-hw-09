@@ -1,11 +1,8 @@
 
 import flatpickr from "flatpickr";
 import "flatpickr/dist/flatpickr.min.css";
-import Swal from 'sweetalert2';
+import { Report } from 'notiflix/build/notiflix-report-aio';
 
-const Swal = require('sweetalert2');
-
-// document.body.style.backgroundColor = '#f8faf7;';
 const TIMER_DELAY = 1000;
 let timerId = null;
 let selectedDate = null;
@@ -14,16 +11,8 @@ let currentDate = null;
 
  const inputCalendar = document.querySelector('#datetime-picker'); 
 const btnStart = document.querySelector('[data-start]');
-// const daysData = document.querySelector('[data-days]');
-// const hoursData = document.querySelector('[data-hours]');
-// const minutesData = document.querySelector('[data-minutes]');
-// const secondsData = document.querySelector('[data-seconds]');
-
 
 btnStart.disabled = true;
-
-
-
 
 flatpickr(inputCalendar, {
     enableTime: true,
@@ -32,15 +21,15 @@ flatpickr(inputCalendar, {
     minuteIncrement: 1,
     onClose(selectedDates) {
       if (selectedDates[0].getTime() < Date.now()) {
-            Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: 'Please choos date in the future!'});
+         Report.failure(
+                 'Ooops...',
+                 'Please, choose a date in the future!' 
+                  );
     } else {
-        Swal.fire({
-            icon: 'success',
-            title: 'Please, click on button start.',
-          }); 
+        Report.success(
+                  'Congratulation! Click on start!',
+                
+                );
           btnStart.disabled = false;
       const setTimer = () => {
         selectedDate = selectedDates[0].getTime();
@@ -65,7 +54,11 @@ const counter = {
             
             if (delta <= 0){
                this.stop();
-                Swal.fire('👏 Congratulation! Timer stopped!');
+                Report.info(
+                            'Congratulation! Timer stopped!',
+                            'Please, if you want to start timer, choose a date and click on start or reload this page',
+            
+                          );
                 return;
             } 
             const { days, hours, minutes, seconds } = this.convertMs(delta);
