@@ -16,3 +16,72 @@ img {
   display: block;
   max-width: 100%;
 }
+
+
+.timer {
+  display: flex;
+  margin-top: 10px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  margin-right: 15px;
+}
+
+.value {
+  font-size: 32px;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 4px;
+  color: #0f0f0f;
+  text-shadow: 0 6px 6px #c4b59d, 0px -3px 1px #fff;
+}
+.seconds{
+  color: #c43131;
+}
+
+.label {
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+  color: #0f0f0f;
+  text-shadow: 0 6px 6px #c4b59d, 0px -3px 1px #fff;
+}
+
+input#datetime-picker{
+  width: 200px;
+  height: 26px;
+  background:#fafafa;
+  border: 1px solid #acaaaa;
+  cursor: pointer;
+  box-shadow: 0 6px 8px #c4b59d, 0 -2px 1px #fff;
+
+  text-align: center;
+  font-weight: 600;
+}
+
+input#datetime-picker:hover,
+input#datetime-picker :focus{
+  border: 1px solid #212121;
+  color: #0f0f0f;
+}
+
+
+button{
+  cursor: pointer;
+  display: inline-block;
+  width: 48px;
+  height: 26px;
+  border: 1px solid #acaaaa;
+  color:#acaaaa;
+  box-shadow: 0 6px 8px #c4b59d, 0 -2px 1px #fff;
+
+}
+
+button:hover,
+button:focus {
+  border: 1px solid #212121;
+  color: #0f0f0f;
+}
