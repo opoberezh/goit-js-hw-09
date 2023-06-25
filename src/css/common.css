@@ -37,7 +37,8 @@ img {
   color: #0f0f0f;
   text-shadow: 0 6px 6px #c4b59d, 0px -3px 1px #fff;
 }
-.seconds{
+
+[data-seconds]{
   color: #c43131;
 }
 
