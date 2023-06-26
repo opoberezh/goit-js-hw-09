@@ -70,13 +70,6 @@ input#datetime-picker :focus{
 }
 
 
-[data-start]{
-  width: 48px;
-  height: 26px;
-  
- 
-}
-
 button {
   cursor: pointer;
   display: inline-block;
@@ -90,6 +83,30 @@ button:focus {
   border: 1px solid #212121;
   color: #0f0f0f;
 }
+
+[data-start]{
+  width: 48px;
+  height: 26px;
+  
+}
+
+button[data-start]{
+  width: 60px;
+  height: 48px;
+ position: absolute;
+  transform: translate(400px, 250px);
+ 
+}
+
+[data-stop]{
+
+  width: 60px;
+  height: 48px;
+ position: absolute;
+  transform: translate(500px, 250px);
+ 
+}
+
 
 .form{
   display: flex;
