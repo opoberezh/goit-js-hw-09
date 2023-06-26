@@ -55,6 +55,7 @@ input#datetime-picker{
   width: 200px;
   height: 26px;
   background:#fafafa;
+  border: none;
   border: 1px solid #acaaaa;
   cursor: pointer;
   box-shadow: 0 6px 8px #c4b59d, 0 -2px 1px #fff;
@@ -80,30 +81,35 @@ button {
 
 button:hover,
 button:focus {
-  border: 1px solid #212121;
-  color: #0f0f0f;
+  border: 1.5px solid #212121;
+  color: #212121;
 }
 
-[data-start]{
+.btn{
   width: 48px;
   height: 26px;
   
 }
 
-button[data-start]{
+.start{
   width: 60px;
   height: 48px;
- position: absolute;
-  transform: translate(400px, 250px);
+ 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
  
 }
 
-[data-stop]{
-
+.stop{
+  margin-left: 70px;
   width: 60px;
   height: 48px;
  position: absolute;
-  transform: translate(500px, 250px);
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
  
 }
 
