@@ -94,7 +94,7 @@ button:focus {
 .container {
   display: inline-block;
   justify-content: space-between;
-  width: 300px;
+  width: 200px;
   margin: auto;
   position: absolute;
   top: 50%;
