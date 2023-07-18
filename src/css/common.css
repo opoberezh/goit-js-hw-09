@@ -76,7 +76,7 @@ button {
   display: inline-block;
   border: 1px solid #acaaaa;
   color:#acaaaa;
-  box-shadow: 0 6px 8px #c4b59d, 0 -2px 1px #fff;
+  box-shadow: 0 6px 8px #c4b59d, 0 -2px 0 #fff;
 }
 
 button:hover,
@@ -91,7 +91,26 @@ button:focus {
   
 }
 
-.start{
+.container {
+  display: inline-block;
+  justify-content: space-between;
+  width: 150px;
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+.container > .btn{
+  width: 65px;
+  height: 55px;
+  background-color: purple;
+  border-radius: 3px;
+ 
+}
+/* .start{
   width: 60px;
   height: 48px;
  
@@ -111,7 +130,7 @@ button:focus {
  left: 50%;
  transform: translate(-50%, -50%);
  
-}
+} */
 
 
 .form{
